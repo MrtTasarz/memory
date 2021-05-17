@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
 
     <title>Memory Game</title>
@@ -11,12 +16,27 @@
 
   <body>
     <div class="playground">
-      <div id="container" class="container"></div>
       <div class="controls">
-        <div class="counter">MOVES : <span id="counter">0</span></div>
         <div class="timer" id="timer">
           <div class="fill" id="fill"></div>
         </div>
+        <div class="counter">MOVES : <span id="counter">0</span></div>
+        <button type="button" id="restart-btn" class="restart btn">
+          Restart
+        </button>
+      </div>
+      <div id="container" class="container"></div>
+      <div id="modulo" class="modulo">
+        <img
+          class="img left"
+          src="/img/reading-side.svg"
+          alt="reading illustration"
+        />
+        <img
+          class="img right"
+          src="/img/rolling.svg"
+          alt="rolling illustration"
+        />
       </div>
     </div>
     <script src="index.js"></script>

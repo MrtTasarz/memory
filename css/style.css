@@ -1,8 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Spartan", sans-serif;
+}
+
+h4 {
+  color: #f9e028;
+  padding-top: 1em;
+}
+
+.img {
+  position: fixed;
+  bottom: 0;
+  height: 30%;
+  aspect-ratio: 1/1;
+  object-fit: fill;
+  display: none;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+.playground {
+  background-color: #f1dde5;
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
-  width: 800px;
-  height: 800px;
+  margin: 1em 0;
+  height: 100vmin;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 0.1em;
 }
@@ -56,13 +94,82 @@
   opacity: 0.8;
 }
 
+.controls {
+  text-align: center;
+}
+
+.btn {
+  text-transform: uppercase;
+  margin: 0.5em 0;
+  color: #ff6d58;
+  font-family: "Spartan", sans-serif;
+  border-radius: 20px;
+  border: 2px solid #ff6d58;
+  background: transparent;
+  font-weight: 700;
+  padding: 0.5em 1em;
+  cursor: pointer;
+}
+
 .timer {
-  width: 500px;
-  height: 50px;
-  border: 1px solid black;
+  margin-bottom: 1em;
+  width: 100%;
+  height: 3em;
+  border-radius: 20px;
+  border: 2px solid #f9e028;
+  overflow-y: hidden;
 }
 .timer .fill {
   width: 0%;
   height: 100%;
-  background-color: tomato;
+  background-color: #ff6d58;
+  transition: width 1s linear;
+  z-index: -1;
+}
+
+.message {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  background: #f9e028;
+  text-transform: uppercase;
+  font-weight: lighter;
+  color: #ff6d58;
+}
+
+@media screen and (min-width: 768px) {
+  .playground {
+    padding: 2em;
+  }
+
+  .container {
+    margin: 0 auto;
+    height: 60vh;
+    width: 60vh;
+  }
+
+  .left,
+.right {
+    display: block;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .playground {
+    padding: 2em;
+  }
+
+  .container {
+    margin: 0 auto;
+    height: 70vh;
+    width: 70vh;
+  }
+
+  .left {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
